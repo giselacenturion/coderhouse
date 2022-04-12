@@ -35,7 +35,6 @@ body {
   .promos{
     display: flex;
     flex-direction: column;   
-    
   }
 
   .titulo{
@@ -86,8 +85,16 @@ body {
 
 .promos{
   grid-area: promos;
+  animation-delay: 5s;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;  
 }
 
+.promos:hover{
+  transform: scale(1.1);
+  transition: all 2s;
+}
 
 .titulo {
   background-image: url(../imagenes/fondos2.gif);

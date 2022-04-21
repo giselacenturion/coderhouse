@@ -29,22 +29,49 @@ body {
 .recetas{
 display: grid;
 grid-template-columns: 1fr 1fr;
-grid-template-rows: 0.2fr 0.4fr 1fr 1fr 0.1fr;
+grid-template-rows: 0.3fr 0.2fr 1.4fr 0.8fr 1.2fr 1rem;
 grid-template-areas: 
 "navegador navegador"
 "tituloReceta tituloReceta"
+"recetaUno recetaUno"
 "ingredientes ingredientes"
 "preparacion preparacion"
 "footer footer"
 }
 
+.recetaUno{
+  grid-area: recetaUno;
+  height: 250px;
+  width: 250px;
+  margin-left: 40%;
+  align-content: center;
+}
+
+.recetaUno :hover{
+  transform: scale(1.1);
+  transition: all 2s;  
+}
+
+.animate__fadeInUpBig{
+  animation-duration: 2s;
+  animation-delay: 1s;
+  
+}
+
+
 
 .tituloReceta{
   grid-area: tituloReceta;
+  margin:20px 0px 15px 0px;
+  transform: scale(1.7);
+  transition: all 1s;
+  animation-iteration-count: initial;
+  animation-timing-function: ease-in;
 }
 
 .ingredientes{
   grid-area: ingredientes;
+  margin-left: 40%;
 }
 
 .preparacion{

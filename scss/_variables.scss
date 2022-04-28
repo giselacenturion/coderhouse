@@ -1,3 +1,48 @@
 $titulosRecetas: 
-margin 20px 0px 15px 0px
+margin 20px 0px 15px 0px;
 
+
+
+$tituloPrin: (
+    color: aliceblue,
+    fuente: verdana,geneva, tahoma, sans-serif,
+    aling: center,
+    grid:titulo,
+    display:flex,
+    alingItems:center,
+    justify:center,
+);
+
+.titulo{
+    color:map-get($tituloPrin,color);
+    font-family: map-get($tituloPrin,fuente);
+    text-align: map-get($tituloPrin,aling);
+    grid-area: map-get($tituloPrin,grid);
+    display: map-get($tituloPrin,display);
+    align-items: map-get($tituloPrin,alingItems);
+    justify-content: map-get($tituloPrin,justify);
+}
+
+
+// Mixin
+
+@mixin tamanoRecetas($width,$height){
+    width: $width;
+    height: $height;
+}
+
+.recetaUno{
+    @include tamanoRecetas(250px, 250px)
+}
+
+
+// Extend
+
+.ingredientes{
+    grid-area:ingredientes;
+    margin-left: 40%;
+}
+
+.ingredientes{
+    @extend .ingredientes;
+}

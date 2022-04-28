@@ -1,0 +1,223 @@
+@import "mediasQ";
+@import "variables";
+  
+  body {
+    background-color: coral;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4rem 10rem 20rem 12rem 20rem 20rem 4rem;  
+    grid-template-areas:
+      "navegador navegador"
+      "titulo titulo"
+      "promos promos"
+      "precios precios"
+      "textos textos"
+      "textos textos"
+      "footer footer"
+  }
+  
+  .promos{
+    grid-area: promos;
+    margin-top: 10px;
+  }
+  .precios{
+    grid-area: precios;
+  }
+  
+  .recetas{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 0.2fr 1.4fr 0.8fr 1.2fr 1rem;
+  grid-template-areas: 
+  "navegador navegador"
+  "tituloReceta tituloReceta"
+  "recetaUno recetaUno"
+  "ingredientes ingredientes"
+  "preparacion preparacion"
+  "footer footer"
+  }
+  
+  .recetaUno{
+    grid-area: recetaUno;
+    height: 250px;
+    width: 250px;
+    margin-left: 40%;
+    align-content: center;
+    &:hover{
+      transform: scale(1.1);
+      transition: all 2s; 
+    }
+
+  }
+
+  .animate__fadeInUpBig{
+    animation-duration: 2s;
+    animation-delay: 1s;
+    
+  }
+  
+  
+  
+  .tituloReceta{
+    grid-area: tituloReceta;
+    transform:  scale(1.7);
+    transition: all 1s;
+    animation-iteration-count: initial;
+    animation-timing-function: ease-in;
+    margin:$titulosRecetas;
+    
+  }
+  
+  .ingredientes{
+    grid-area: ingredientes;
+    margin-left: 40%;
+  }
+  
+  .preparacion{
+    grid-area: preparacion;
+  }
+  
+  .promos{
+    grid-area: promos;
+    animation-delay: 5s;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+      &:hover{
+        transform: scale(1.1);
+        transition: all 2s;
+      }
+  }
+  
+  .titulo {
+    background-image: url(../imagenes/fondos2.gif);
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    grid-area: titulo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .navegador{
+    display: flex;
+  
+  }
+  
+
+nav ul{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+              li {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+    border: 1px solid black;
+    margin-top: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin-left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+            a {
+      text-decoration: none;
+      color: white;
+                    &:hover{
+        color: coral;
+      }
+    }
+  }
+}
+
+  
+  p {
+    margin: 50px;
+    padding-right: 20px;
+    font-size: 30px;
+    color: black;
+  }
+  
+  .textos_ini{
+    grid-area: textos;
+    display: flex;
+  
+  }
+  
+  
+  .parrafoDiferente {
+    color: blue;
+  }
+  
+  .carrito {
+    position: fixed;
+    height: 100px;
+    top: 200px;
+    right: 10px;
+  }
+  
+  .pizzas {
+    width: 350px;
+    height: 300px;
+    border-style: dotted;
+    margin-left: 37%;
+  }
+  
+  .burguer {
+    width: 350px;
+    height: 300px;
+    border-style: dotted;
+    margin-left: 37%;
+  }
+  
+  .empanadas {
+    width: 350px;
+    height: 300px;
+    border-style: dotted;
+    margin-left: 37%;
+  }
+  
+  table {
+    margin-top: 30px;
+    margin-left: 35%;
+        th{
+          text-transform: uppercase;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+                td{
+                  font-weight: bold;
+                  text-align: center;
+                }
+        }
+
+  }   
+  
+  .parrafocontacto {
+    text-align: center;
+  }
+  
+  footer {
+    background-color: rgb(194, 124, 190);
+    text-align: center;
+    height: 45px;
+    text-transform: uppercase;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  dd {
+    margin: 5px;
+    padding: 5px;
+    padding-right: 20px;
+    color: black;
+  }

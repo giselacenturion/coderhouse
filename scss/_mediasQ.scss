@@ -1,0 +1,64 @@
+  
+  /*Tablet 800 px*/
+  @media screen and (min-width: 768px) and (max-width:1023){
+    body{
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.1fr 0.4fr 0.8fr 0.5fr 0.1fr 0.1fr;
+      grid-template-areas:
+        "navegador"
+        "titulo"
+        "promos"
+        "textoUno"
+        "textoDos"
+        "footer"
+        
+    }
+   
+    .promos{
+      display: flex;
+      flex-direction: column;   
+    }
+  
+    .titulo{
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+    }
+  
+    table{
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+    }
+  }
+  
+  /*Celular 480 px*/
+  
+  @media screen and (min-width:375px) and (max-width:767){
+    body{
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.1fr 0.4fr 0.2fr 0.5fr 0.1fr 0.1fr;
+      grid-template-areas:
+        "navegador"
+        "titulo"
+        "promos"
+        "textos"
+        "textos"
+        "footer"
+    }
+      
+    .promos{
+      display: flex;
+      flex-direction: column;   
+     
+    }
+  
+    table{
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+    }
+  }
